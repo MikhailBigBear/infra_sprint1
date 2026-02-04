@@ -15,7 +15,11 @@ router.register(r'cats', CatViewSet)
 router.register(r'achievements', AchievementViewSet)
 
 urlpatterns = [
-    path('api/signup/', djoser_views.UserViewSet.as_view({'post': 'create'}), name='signup'),
+    path(
+        'api/users/',
+        djoser_views.UserViewSet.as_view({'post': 'create'}),
+        name='signup',
+    ),
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('api/', include('djoser.urls')),  # Работа с пользователями

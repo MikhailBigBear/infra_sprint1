@@ -10,7 +10,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-cg6*%6d51ef8f#4!r3*$vmxm4)
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['130.193.45.160', '127.0.0.1', 'localhost', 'kittygramchick-demo.ru']
+ALLOWED_HOSTS = ['130.193.45.160', '0.0.0.0', 'localhost', 'kittygramchick-demo.ru']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -104,7 +104,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated', 
+        'rest_framework.permissions.AllowAny', 
     ],
 
     'DEFAULT_AUTHENTICATION_CLASSES': [
