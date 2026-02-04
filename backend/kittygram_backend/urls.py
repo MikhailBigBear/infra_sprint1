@@ -5,6 +5,7 @@ from django.urls import include, path
 
 from django.conf import settings
 from django.conf.urls.static import static
+from djoser import views as djoser_views
 
 from cats.views import AchievementViewSet, CatViewSet
 
@@ -14,6 +15,7 @@ router.register(r'cats', CatViewSet)
 router.register(r'achievements', AchievementViewSet)
 
 urlpatterns = [
+    path('api/signup/', djoser_views.UserViewSet.as_view({'post': 'create'}), name='signup'),
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('api/', include('djoser.urls')),  # Работа с пользователями
