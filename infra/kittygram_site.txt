@@ -1,0 +1,5 @@
+IP: 130.193.45.160;
+name_taski: https://mikhailbigbear.hopto.org;
+name_kittygram: https://kittygramchick-demo.ru;
+login: ubuntu;
+password: 1123;
